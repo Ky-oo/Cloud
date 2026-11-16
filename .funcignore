@@ -1,0 +1,7 @@
+.git/
+.gitignore
+.azurite/
+node_modules/
+local.settings.json
+README.md
+

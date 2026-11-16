@@ -1,0 +1,21 @@
+{
+  "name": "tp-azure-functions",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Architecture serverless locale HTTP -> Queue Storage -> Table Storage",
+  "main": "src/functions/*.js",
+  "scripts": {
+    "start": "func start",
+    "storage": "azurite --location .azurite --debug .azurite/debug.log --silent",
+    "check": "node --check src/functions/submitMessage.js && node --check src/functions/storeMessage.js"
+  },
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "dependencies": {
+    "@azure/functions": "^4.0.0"
+  },
+  "devDependencies": {
+    "azurite": "^3.0.0"
+  }
+}
